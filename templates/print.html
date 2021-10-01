@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<meta http-equiv="refresh" content="15; url={{ url_for('index') }}" >
+{% endblock %}
+
+{% block title %}Request a label{% endblock %}
+
+{% block content %}
+<h2>Storage label printing</h2>
+<p class="center">Your label is being printed...</p>
+<p class="center"><a class="button" href={{ url_for('index') }}>Return to home</a></p>
+<p class="center"><a class="button" href={{ url_for('print', label_type=label_type, your_name=your_name) }}>Print another one</a></p>
+<p class="center">(Will automatically return in 15 seconds)</p>
+{% endblock %}

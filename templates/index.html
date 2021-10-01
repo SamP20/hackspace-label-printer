@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Request a label{% endblock %}
+
+{% block content %}
+<h2>Storage label printing</h2>
+<form id="label_form" action={{ url_for('print') }}>
+    <label for="your_name">Your name:</label>
+    <input type="text" id="your_name" name="your_name">
+    <div class="flex-horizontal">
+        <button type="submit" name="label_type" value="long_stay" class="button">Print Long Stay Label</button>
+        <button type="submit" name="label_type" value="short_stay" class="button">Print Short Stay Label</button>
+    </div>
+</form>
+{% endblock %}

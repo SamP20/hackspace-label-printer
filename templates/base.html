@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Milligram provides a minimal setup of styles for a fast and clean starting point. Specially designed for better performance and higher productivity with fewer properties to reset resulting in cleaner code." />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" href="images/favicon.ico" />
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    {% endblock %}
+</head>
+
+<body>
+    <header>
+        <img src="https://dc.brisflix.com/uploads/default/original/1X/99f18d267051d66a9deaa6d942fcefeb9eb2dadc.png" class="logo" alt="Hackspace logo"/><h1>Bristol Hackspace</h1>
+    </header>
+    <nav>
+        {% block navigation %}{% endblock %}
+    </nav>
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>

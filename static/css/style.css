@@ -1,0 +1,150 @@
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+@font-face {
+    font-family: ocraextended;
+    src: url(ocraextended.ttf);
+}
+
+:root {
+    --background-1: #d8c9b8;
+    --background-2: #f0ede8;
+    --text-primary: #1b1b1a;
+    --accent-1: #48cece;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-1: #2b3a4d;
+        --background-2: #232f3d;
+        --text-primary: #e1d2c9;
+        --accent-1: #807222;
+        --focus-border: #cf7a34;
+    }
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--text-primary);
+  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: .01em;
+  line-height: 1.6;
+  background-color: var(--background-2);
+}
+
+.container {
+    max-width: 70rem;
+    padding: 0 2.0rem;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--background-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-family: ocraextended, sans-serif;
+    margin: 1rem;
+    display: none;
+}
+
+@media screen and (min-width: 50rem) {
+    header h1 {
+        display: block;
+    }
+}
+
+nav {
+    background-color: var(--background-1);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav a {
+    line-height: 4rem;
+    text-decoration: none;
+    padding: 0 2rem;
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: var(--text-primary);
+    color: var(--background-1);
+}
+
+.logo {
+    width: 5rem;
+    padding: 0.2rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Tool info */
+
+#label_form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+label {
+    text-align: center;
+    font-size: 2.0rem;
+}
+
+input {
+    border-radius: 0.5rem;
+    outline: max(1px, 0.2rem) solid #9c9c9c;
+    border: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    flex: 1;
+    font-size: 2.0rem;
+}
+
+input:focus {
+    outline-color: #cf7a34;
+}
+
+.button {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1.0rem;
+    background-color: var(--accent-1);
+    color: var(--text-primary);
+    font-weight: bold;
+    margin: 1rem;
+    font-size: 2.0rem;
+    text-decoration: none;
+}
+
+.button:hover,.button:focus {
+    outline: max(1px, 0.2rem) solid var(--focus-border);
+}
+
+.flex-horizontal {
+    display: flex;
+    justify-content: space-around;
+}
+
+.center {
+    text-align: center;
+}
