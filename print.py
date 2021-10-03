@@ -8,10 +8,10 @@ from brother_ql.devicedependent import label_type_specs
 
 LABEL_SIZE = '29x90'
 MODEL = "QL-570"
-# BACKEND = "linux_kernel"
-# PRINTER = "/dev/usb/lp0"
-BACKEND = "pyusb"
-PRINTER = "usb://0x04f9:0x2028"
+BACKEND = "linux_kernel"
+PRINTER = "/dev/usb/lp0"
+# BACKEND = "pyusb"
+# PRINTER = "usb://0x04f9:0x2028"
 
 def draw(dots, name, description, date):
     # Draw horizontally and rotate later
